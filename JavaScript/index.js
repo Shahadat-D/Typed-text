@@ -50,7 +50,3 @@ function type(texts) {
 }
 
 type(list);
-
-function repeat () {
-
-}
