@@ -20,7 +20,6 @@ function type() {
     //if it went through the whole array it will start from beginning.
 	if(count == texts.length) {
 		count = 0;
-		console.log(count + 'count');
 	}
 
     //current word/sentence.
@@ -38,7 +37,7 @@ function type() {
 	if(index == -1){
 		irretation++;
 	}else{
-		document.querySelector('.type-text').textContent = " " + letter;
+		document.querySelector('.type-text').textContent = letter;
 	}
 	
     //if it went forward then now it will backward.
