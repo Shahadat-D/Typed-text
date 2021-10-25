@@ -38,7 +38,7 @@ function type() {
 	if(index == -1){
 		irretation++;
 	}else{
-		document.querySelector('.type-text').innerHTML = "It's " + letter;
+		document.querySelector('.type-text').textContent = " " + letter;
 	}
 	
     //if it went forward then now it will backward.
