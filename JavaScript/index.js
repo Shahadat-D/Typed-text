@@ -1,6 +1,6 @@
 // text goes in the "texts" array.
 
-const texts = ['Great', 'Awsome', 'Strong', 'Courages'];
+const list = ['Great', 'Awsome', 'Strong', 'Courages'];
 
 let count = 0;
 let index = 0;
@@ -9,7 +9,7 @@ let letter = '';
 let forward = true;
 let irretation = 0;
 
-function type() {
+function type(texts) {
 	//after finishing a word it moves to the next one.
 	if (index < 0) {
 		count++;
@@ -46,7 +46,11 @@ function type() {
 	}
 
     //how much time between each char.
-	setTimeout(type, 300);
+	setTimeout(type, 300, texts);
 }
 
-type();
+type(list);
+
+function repeat () {
+
+}
