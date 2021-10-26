@@ -1,15 +1,19 @@
-// text goes in the "texts" array.
+// text goes in to an array.
 
 const list = ['Great', 'Awsome', 'Strong', 'Courages'];
 
+//Count the word
 let count = 0;
+
+//count the char
 let index = 0;
+
 let currentText = '';
 let letter = '';
 let forward = true;
 let irretation = 0;
 
-function type(texts) {
+function type(texts, className) {
 	//after finishing a word it moves to the next one.
 	if (index < 0) {
 		count++;
@@ -37,7 +41,7 @@ function type(texts) {
 	if(index == -1){
 		irretation++;
 	}else{
-		document.querySelector('.type-text').textContent = letter;
+		document.querySelector(className).textContent = letter;
 	}
 	
     //if it went forward then now it will backward.
@@ -46,7 +50,8 @@ function type(texts) {
 	}
 
     //how much time between each char.
-	setTimeout(type, 300, texts);
+	setTimeout(type, 300, texts, className);
 }
 
-type(list);
+//put list as the 1st pram and class or id as the 2n pram
+type(list, '.type-text');
