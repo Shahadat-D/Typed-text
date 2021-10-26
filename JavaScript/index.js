@@ -1,7 +1,3 @@
-// text goes in to an array.
-
-const list = ['Great', 'Awsome', 'Strong', 'Courages'];
-
 //Count the word
 let count = 0;
 
@@ -13,7 +9,7 @@ let letter = '';
 let forward = true;
 let irretation = 0;
 
-function type(texts, className) {
+function typeText(texts, className) {
 	//after finishing a word it moves to the next one.
 	if (index < 0) {
 		count++;
@@ -50,8 +46,7 @@ function type(texts, className) {
 	}
 
     //how much time between each char.
-	setTimeout(type, 300, texts, className);
+	setTimeout(typeText, 300, texts, className);
 }
-
-//put list as the 1st pram and class or id as the 2nd pram
-type(list, '.type-text');
+//export function.
+export default typeText;
