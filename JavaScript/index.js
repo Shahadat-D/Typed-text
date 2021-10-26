@@ -53,5 +53,5 @@ function type(texts, className) {
 	setTimeout(type, 300, texts, className);
 }
 
-//put list as the 1st pram and class or id as the 2n pram
+//put list as the 1st pram and class or id as the 2nd pram
 type(list, '.type-text');
