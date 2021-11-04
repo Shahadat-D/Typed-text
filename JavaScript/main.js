@@ -1,4 +1,4 @@
-import typeText from "./index.js";
+import typedText from "./index.js";
 
 //import or declare an array
 
@@ -8,6 +8,6 @@ const happy = ['Have a nice day.'];
 
 //array goes in the 1st pram & selected HTML item in the next
 
-typeText(list, '.type-text');
+typedText(list, '.type-text');
 
-typeText(happy, '.happy');
+typedText(happy, '.happy');
