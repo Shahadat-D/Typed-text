@@ -9,7 +9,6 @@ function typedText(texts, className) {
 	let currentText = '';
 	let letter = '';
 	let forward = true;
-	let irretation = 0;
 
 	function type(texts, className) {
 	
@@ -38,7 +37,7 @@ function typedText(texts, className) {
 	
 		//irretation doesn't do anything.
 		if (index == -1) {
-			irretation++;
+			//pass
 		} else {
 			document.querySelector(className).textContent = letter;
 		}
