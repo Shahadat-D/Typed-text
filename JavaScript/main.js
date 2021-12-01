@@ -8,6 +8,6 @@ const happy = ['Have a nice day.'];
 
 //array goes in the 1st pram & selected HTML item in the next
 
-typedText(list, '.type-text');
+typedText(list, '.type-text', 200);
 
-typedText(happy, '.happy');
+typedText(happy, '.happy', 1000);

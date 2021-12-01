@@ -1,4 +1,4 @@
-function typedText(texts, className) {
+function typedText(texts, className, timeInterval) {
 
 	//Count the word
 	let count = 0;
@@ -46,12 +46,17 @@ function typedText(texts, className) {
 		if (letter.length === currentText.length) {
 			forward = !forward;
 		}
-	
-		//how much time between each char.
-		setTimeout(type, 300, texts, className);
+		
 	}
 
-	type(texts, className);
+	//how much time between each char.
+
+	function timer(timeInterval){
+		
+		setTimeout(type, timeInterval || 300, texts, className);
+		setTimeout(timer, timeInterval, timeInterval );
+	}
+	timer(timeInterval);
 }
 
 export default typedText;
