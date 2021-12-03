@@ -47,7 +47,7 @@ function typedText(texts, className, timeInterval) {
 			forward = !forward;
 		}
 		
-		//how much time between each char.
+		//how much time between each char. default time interval is 300ms.
 		setTimeout(type, timeInterval || 300, texts, className);
 		
 	}
