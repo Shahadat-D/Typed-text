@@ -10,7 +10,7 @@ function typedText(texts, className, timeInterval) {
 	let letter = '';
 	let forward = true;
 
-	function type(texts, className) {
+	function type(texts, className, timeInterval) {
 	
 		//after finishing a word it moves to the next one.
 		if (index < 0) {
@@ -47,16 +47,13 @@ function typedText(texts, className, timeInterval) {
 			forward = !forward;
 		}
 		
-	}
-
-	//how much time between each char.
-
-	function timer(timeInterval){
-		
+		//how much time between each char.
 		setTimeout(type, timeInterval || 300, texts, className);
-		setTimeout(timer, timeInterval, timeInterval );
+		
 	}
-	timer(timeInterval);
+	//Call the function.
+	type(texts, className, timeInterval);	
+
 }
 
 export default typedText;
